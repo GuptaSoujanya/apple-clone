@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
     <!-- <link rel="stylesheet" href="reset.css"> buat reset css -->
     <link rel="shortcut icon" type="image/jpg" href="./img/apple-logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
-        crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="./img/iphone_12.jpg" imagesrcset="./img/iphone_12.jpg 1200w" imagesizes="100vw">
+    <link rel="preload" as="image" href="./img/iphone12pro-background.jpg" imagesrcset="./img/iphone12pro-background.jpg 1200w" imagesizes="100vw">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"></noscript>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
             <span class="menu-logo hp-viewport fas fa-ellipsis-h"></span>
             <ul class="header-list">
                 
-                <li class="header-content hp-viewport apple-header"><a href="https://www.apple.com/"><img class="logo" src="./img/apple-logo.png"></a></li>
+                <li class="header-content hp-viewport apple-header"><a href="https://www.apple.com/"><img class="logo" src="./img/apple-logo.png" width="25" height="25" alt="Apple" loading="eager" decoding="async"></a></li>
 
                 <li class="header-content hp-viewport-hide"><a href="https://www.apple.com/mac/">Mac</a></li>
                 <li class="header-content hp-viewport-hide"><a href="https://www.apple.com/ipad/">iPad</a></li>
@@ -110,7 +110,7 @@
                         <a href="https://www.apple.com/apple-fitness-plus/" class="buy-link">Learn more ></a>
                     </div>
                 <div class="image-container">
-                <div class="fitness" onclick="location.href='https:https://www.apple.com/apple-fitness-plus/';" style="cursor: pointer;"></div>>          
+                <div class="fitness" onclick="location.href='https://www.apple.com/apple-fitness-plus/';" style="cursor: pointer;"></div>
                     </div>
 </div>
 </div>
@@ -125,7 +125,7 @@
                 <div class="theme-dark container-main"
                     onclick="location.href='https://www.apple.com/apple-watch-series-6/';" style="cursor: pointer;">
                     <div class="unit-copy-wrapper">
-                        <img class="apple-watch-logo" src="./img/apple-watch-logo.png" alt="apple-watch-logo">
+                        <img class="apple-watch-logo" src="./img/apple-watch-logo.png" alt="apple-watch-logo" loading="lazy" decoding="async">
                         <h2 class="headline">The future of health is on your wrist.</h2>
                     </div>
                     <div class="cta-links">
@@ -134,7 +134,7 @@
                     </div>
                     <div class="unit-image">
                         <figure>
-                            <img src="./img/apple-watch-6.png" alt="apple-watch">
+                            <img src="./img/apple-watch-6.png" alt="apple-watch" loading="lazy" decoding="async">
                         </figure>
                     </div>
                 </div>
@@ -145,7 +145,7 @@
                 <div class="theme-light container-main" onClick="location.href='https://www.apple.com/ipad-air/';"
                     style="cursor: pointer;">
                     <div class="unit-copy-wrapper">
-                        <img class="apple-watch-logo" src="./img/ipad-air-logo.png" alt="">
+                        <img class="apple-watch-logo" src="./img/ipad-air-logo.png" alt="iPad Air" loading="lazy" decoding="async">
                         <h2 class="headline">Powerful. Colorful. Wonderful.</h2>
                     </div>
                     <div class="cta-links">
@@ -154,7 +154,7 @@
                     </div>
                     <div class="unit-image">
                         <figure>
-                            <img src="./img/ipad-air.png" alt="ipad-air" style="width: 70%;">
+                            <img src="./img/ipad-air.png" alt="ipad-air" style="width: 70%;" loading="lazy" decoding="async">
                         </figure>
                     </div>
                 </div>
@@ -164,7 +164,7 @@
 
                 <div class="theme-dark container-main" onclick="location.href='https://www.apple.com/macbook-air/';" style="cursor: pointer;">
                     <div class="unit-copy-wrapper">
-                        <img class="mackbook-air-logo" src="./img/macbook-air-logo.png" alt=""
+                        <img class="mackbook-air-logo" src="./img/macbook-air-logo.png" alt="MacBook Air"
                             style="width: 35%; margin-top: 55px;">
                         <h2 class="headline">Power. it's in the Air.</h2>
                     </div>
@@ -174,7 +174,7 @@
                     </div>
                     <div class="unit-image">
                         <figure>
-                            <img src="./img/macbook-air.png" alt="" style="width: 100%; height: 100%;">
+                            <img src="./img/macbook-air.png" alt="MacBook Air" style="width: 100%; height: 100%;" loading="lazy" decoding="async">
                         </figure>
                     </div>
                 </div>
@@ -184,7 +184,7 @@
 
                 <div class="theme-light container-main" onclick="location.href='https://www.apple.com/apple-one/'" style="cursor: pointer;">
                     <div class="unit-copy-wrapper">
-                        <img src="./img/apple-one-logo.png" alt="" style="width: 30%; margin-top: 20px;">
+                        <img src="./img/apple-one-logo.png" alt="Apple One" style="width: 30%; margin-top: 20px;" loading="lazy" decoding="async">
                         <h2 class="headline">Bundle up to six Apple services.<br>And enjoy more for less</h2>
                     </div>
                     <div class="cta-links">
@@ -193,7 +193,7 @@
                     </div>
                     <div class="unit-image">
                         <figure>
-                            <img src="./img/apple-one.png" alt="apple-one" style="width: 80%;">
+                            <img src="./img/apple-one.png" alt="apple-one" style="width: 80%;" loading="lazy" decoding="async">
                         </figure>
                     </div>
                 </div>
@@ -202,7 +202,7 @@
 
                 <div class="theme-light container-main" onclick="location.href='https://www.apple.com/apple-card/'" style="cursor: pointer;">
                     <div class="unit-copy-wrapper">
-                        <img src="./img/apple-card-logo.png" alt="apple-card-logo" style="width: 20%; margin-top: 20px;">
+                        <img src="./img/apple-card-logo.png" alt="apple-card-logo" style="width: 20%; margin-top: 20px;" loading="lazy" decoding="async">
                         <h2 style="margin-bottom: 10px; font-size: 19px; color: #1D1D1F">
                             Get 3% Daily Cash back on<br> 
                             purchases from Apple when<br> 
@@ -214,7 +214,7 @@
                     </div>
                     <div class="unit-image">
                         <figure style="margin-top: 0;">
-                            <img src="./img/apple-card.png" alt="apple-card" style="width: 80%;">
+                            <img src="./img/apple-card.png" alt="apple-card" style="width: 80%;" loading="lazy" decoding="async">
                         </figure>
                     </div>
                 </div>
@@ -226,13 +226,13 @@
                     
                     
                     <div class="unit-copy-wrapper">
-                        <img src="./img/apple-tv-logo.png" alt="apple-tv-logo" style="width: 15%; margin-top: 20px;">
+                        <img src="./img/apple-tv-logo.png" alt="apple-tv-logo" style="width: 15%; margin-top: 20px;" loading="lazy" decoding="async">
                         <h2>You can't hide from greatness.</h2>
                     </div>
                     <div class="cta-links"><a href="https://tv.apple.com/season/umc.cmc.7525wsaxw3oprxq6b307ideiz?showId=umc.cmc.1ogyy5s2agasxa5qztabrlykn&itscg=10000&itsct=atv-0-apl_hp-pmo_wch-dickinson2-201104" style="color: white;">Watch the new season <span class="fas fa-play-circle" style="float: none; margin: 0;"></span> </a></div>
                     <div class="unit-image">
                         <figure>
-                            <img src="./img/dickinson-apple-tv.png" alt="apple-tv" style="width: 80%;">
+                            <img src="./img/dickinson-apple-tv.png" alt="apple-tv" style="width: 80%;" loading="lazy" decoding="async">
                         </figure>
                     </div>
                     
@@ -335,6 +335,6 @@
     </footer>
 
     
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
