@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Optimization Guide</title>
+</head>
+<body>
+    <h1>Image Optimization Recommendations</h1>
+    
+    <h2>Current Image Sizes:</h2>
+    <ul>
+        <li>ipad-air.png: 1.9MB (CRITICAL - needs optimization)</li>
+        <li>dickinson-apple-tv.png: 156KB</li>
+        <li>macbook-air.png: 152KB</li>
+        <li>apple-fitness.jpg: 136KB</li>
+    </ul>
+    
+    <h2>Optimization Steps:</h2>
+    <ol>
+        <li><strong>Convert to WebP format:</strong> Use tools like cwebp to convert PNG/JPG to WebP (typically 25-35% smaller)</li>
+        <li><strong>Resize images:</strong> The iPad Air image should be resized to actual display dimensions</li>
+        <li><strong>Use responsive images:</strong> Implement srcset for different screen sizes</li>
+        <li><strong>Progressive JPEG:</strong> For remaining JPEG images, use progressive encoding</li>
+    </ol>
+    
+    <h2>Commands for optimization (when tools are available):</h2>
+    <pre>
+# Convert to WebP (requires cwebp)
+cwebp -q 80 img/ipad-air.png -o img/ipad-air.webp
+cwebp -q 85 img/macbook-air.png -o img/macbook-air.webp
+
+# Resize large images (requires ImageMagick)
+convert img/ipad-air.png -resize 800x600 img/ipad-air-optimized.png
+
+# Create responsive versions
+convert img/ipad-air.png -resize 400x300 img/ipad-air-small.png
+convert img/ipad-air.png -resize 800x600 img/ipad-air-medium.png
+    </pre>
+    
+    <h2>HTML Pattern for optimized images:</h2>
+    <pre>
+&lt;picture&gt;
+    &lt;source srcset="img/ipad-air.webp" type="image/webp"&gt;
+    &lt;source srcset="img/ipad-air.png" type="image/png"&gt;
+    &lt;img src="img/ipad-air.png" alt="iPad Air" loading="lazy"&gt;
+&lt;/picture&gt;
+    </pre>
+</body>
+</html>
