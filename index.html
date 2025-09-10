@@ -6,16 +6,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
+    <style>
+        /* Critical CSS for above-the-fold content */
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        body, main {
+            margin: 0 auto;
+            font-family: 'Roboto', 'Helvetica', Arial, sans-serif;
+            background-color: #fff;
+        }
+        
+        ul, li, ol {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        header {
+            position: fixed;
+            top: 0;
+            height: 52px;
+            width: 100%;
+            color: rgba(255, 253, 253, 0.87);
+            background-color: rgba(0,0,0,0.92);
+            z-index: 10;
+        }
+        
+        .header-list {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 0;
+        }
+        
+        .header-list li {
+            margin: 0;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-list li a {
+            text-decoration: none;
+            color: #f5f5f7;
+        }
+        
+        .logo {
+            width: 25px;
+        }
+        
+        .contents {
+            background-color: white;
+        }
+        
+        .iphone-12 {
+            height: 100%;
+            background-image: url(img/iphone_12.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .image-container .iphone-12 {
+            height: 640px;
+            width: 100%;
+            margin-bottom: 0px;
+        }
+        
+        .iphone-12 .title {
+            text-align: center;
+            padding-top: 50px;
+        }
+        
+        .iphone-12 .title h1 {
+            font-size: 50px;
+            color: rgba(0, 0, 0, 0.897);
+            font-weight: 700;
+        }
+        
+        .iphone-12 .title p {
+            font-size: 25px;
+            font-weight: bold;
+            color: rgba(41, 41, 41, 0.89);
+        }
+        
+        .cta-links {
+            text-align: center;
+        }
+        
+        /* Image optimization */
+        img {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+        
+        /* Prevent layout shift */
+        .unit-image img {
+            aspect-ratio: attr(width) / attr(height);
+        }
+    </style>
+    <link rel="preload" href="style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.min.css"></noscript>
+    <link rel="preload" href="responsive.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="responsive.min.css"></noscript>
     <!-- <link rel="stylesheet" href="reset.css"> buat reset css -->
     <link rel="shortcut icon" type="image/jpg" href="./img/apple-logo.png">
+    <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
         crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="./img/iphone_12.jpg">
+    <link rel="preload" as="image" href="./img/iphone12pro-background.jpg">
 </head>
 
 <body>
@@ -25,7 +137,7 @@
             <span class="menu-logo hp-viewport fas fa-ellipsis-h"></span>
             <ul class="header-list">
                 
-                <li class="header-content hp-viewport apple-header"><a href="https://www.apple.com/"><img class="logo" src="./img/apple-logo.png"></a></li>
+                <li class="header-content hp-viewport apple-header"><a href="https://www.apple.com/"><img class="logo" src="./img/apple-logo.png" alt="Apple logo" width="25" height="30"></a></li>
 
                 <li class="header-content hp-viewport-hide"><a href="https://www.apple.com/mac/">Mac</a></li>
                 <li class="header-content hp-viewport-hide"><a href="https://www.apple.com/ipad/">iPad</a></li>
@@ -54,20 +166,6 @@
             </ul>
         </div>
     </header>
-    <!-- <nav>
-        <ul>
-            <li><a href="#"><i class="fab fa-apple"></i></a></li>
-            <li><a href="#">Mac</a></li>  
-            <li><a href="#">iPad</a></li>  
-            <li><a href="#">iPhone</a></li>  
-            <li><a href="#">Watch</a></li>  
-            <li><a href="#">TV</a></li>  
-            <li><a href="#">Music</a></li>  
-            <li><a href="#">Service</a></li>  
-            <li><a href="#"><i class="fas fa-search"></i></a></li>  
-            <li><a href="#"><i class="fas fa-shopping-bag"></i></a></li>  
-        </ul>
-    </nav> -->
     <!-- header -->
 
     <main>
@@ -125,7 +223,7 @@
                 <div class="theme-dark container-main"
                     onclick="location.href='https://www.apple.com/apple-watch-series-6/';" style="cursor: pointer;">
                     <div class="unit-copy-wrapper">
-                        <img class="apple-watch-logo" src="./img/apple-watch-logo.png" alt="apple-watch-logo">
+                        <img class="apple-watch-logo" src="./img/apple-watch-logo.png" alt="apple-watch-logo" loading="lazy">
                         <h2 class="headline">The future of health is on your wrist.</h2>
                     </div>
                     <div class="cta-links">
@@ -134,7 +232,7 @@
                     </div>
                     <div class="unit-image">
                         <figure>
-                            <img src="./img/apple-watch-6.png" alt="apple-watch">
+                            <img src="./img/apple-watch-6.png" alt="apple-watch" loading="lazy">
                         </figure>
                     </div>
                 </div>
@@ -145,7 +243,7 @@
                 <div class="theme-light container-main" onClick="location.href='https://www.apple.com/ipad-air/';"
                     style="cursor: pointer;">
                     <div class="unit-copy-wrapper">
-                        <img class="apple-watch-logo" src="./img/ipad-air-logo.png" alt="">
+                        <img class="apple-watch-logo" src="./img/ipad-air-logo.png" alt="iPad Air logo" loading="lazy">
                         <h2 class="headline">Powerful. Colorful. Wonderful.</h2>
                     </div>
                     <div class="cta-links">
@@ -154,7 +252,7 @@
                     </div>
                     <div class="unit-image">
                         <figure>
-                            <img src="./img/ipad-air.png" alt="ipad-air" style="width: 70%;">
+                            <img src="./img/ipad-air.png" alt="ipad-air" style="width: 70%;" loading="lazy">
                         </figure>
                     </div>
                 </div>
@@ -164,8 +262,8 @@
 
                 <div class="theme-dark container-main" onclick="location.href='https://www.apple.com/macbook-air/';" style="cursor: pointer;">
                     <div class="unit-copy-wrapper">
-                        <img class="mackbook-air-logo" src="./img/macbook-air-logo.png" alt=""
-                            style="width: 35%; margin-top: 55px;">
+                        <img class="mackbook-air-logo" src="./img/macbook-air-logo.png" alt="MacBook Air logo"
+                            style="width: 35%; margin-top: 55px;" loading="lazy">
                         <h2 class="headline">Power. it's in the Air.</h2>
                     </div>
                     <div class="cta-links">
@@ -174,7 +272,7 @@
                     </div>
                     <div class="unit-image">
                         <figure>
-                            <img src="./img/macbook-air.png" alt="" style="width: 100%; height: 100%;">
+                            <img src="./img/macbook-air.png" alt="MacBook Air" style="width: 100%; height: 100%;" loading="lazy">
                         </figure>
                     </div>
                 </div>
@@ -184,7 +282,7 @@
 
                 <div class="theme-light container-main" onclick="location.href='https://www.apple.com/apple-one/'" style="cursor: pointer;">
                     <div class="unit-copy-wrapper">
-                        <img src="./img/apple-one-logo.png" alt="" style="width: 30%; margin-top: 20px;">
+                        <img src="./img/apple-one-logo.png" alt="Apple One logo" style="width: 30%; margin-top: 20px;" loading="lazy">
                         <h2 class="headline">Bundle up to six Apple services.<br>And enjoy more for less</h2>
                     </div>
                     <div class="cta-links">
@@ -193,7 +291,7 @@
                     </div>
                     <div class="unit-image">
                         <figure>
-                            <img src="./img/apple-one.png" alt="apple-one" style="width: 80%;">
+                            <img src="./img/apple-one.png" alt="apple-one" style="width: 80%;" loading="lazy">
                         </figure>
                     </div>
                 </div>
@@ -202,7 +300,7 @@
 
                 <div class="theme-light container-main" onclick="location.href='https://www.apple.com/apple-card/'" style="cursor: pointer;">
                     <div class="unit-copy-wrapper">
-                        <img src="./img/apple-card-logo.png" alt="apple-card-logo" style="width: 20%; margin-top: 20px;">
+                        <img src="./img/apple-card-logo.png" alt="apple-card-logo" style="width: 20%; margin-top: 20px;" loading="lazy">
                         <h2 style="margin-bottom: 10px; font-size: 19px; color: #1D1D1F">
                             Get 3% Daily Cash back on<br> 
                             purchases from Apple when<br> 
@@ -214,7 +312,7 @@
                     </div>
                     <div class="unit-image">
                         <figure style="margin-top: 0;">
-                            <img src="./img/apple-card.png" alt="apple-card" style="width: 80%;">
+                            <img src="./img/apple-card.png" alt="apple-card" style="width: 80%;" loading="lazy">
                         </figure>
                     </div>
                 </div>
@@ -226,13 +324,13 @@
                     
                     
                     <div class="unit-copy-wrapper">
-                        <img src="./img/apple-tv-logo.png" alt="apple-tv-logo" style="width: 15%; margin-top: 20px;">
+                        <img src="./img/apple-tv-logo.png" alt="apple-tv-logo" style="width: 15%; margin-top: 20px;" loading="lazy">
                         <h2>You can't hide from greatness.</h2>
                     </div>
                     <div class="cta-links"><a href="https://tv.apple.com/season/umc.cmc.7525wsaxw3oprxq6b307ideiz?showId=umc.cmc.1ogyy5s2agasxa5qztabrlykn&itscg=10000&itsct=atv-0-apl_hp-pmo_wch-dickinson2-201104" style="color: white;">Watch the new season <span class="fas fa-play-circle" style="float: none; margin: 0;"></span> </a></div>
                     <div class="unit-image">
                         <figure>
-                            <img src="./img/dickinson-apple-tv.png" alt="apple-tv" style="width: 80%;">
+                            <img src="./img/dickinson-apple-tv.png" alt="apple-tv" style="width: 80%;" loading="lazy">
                         </figure>
                     </div>
                     
@@ -327,14 +425,10 @@
                     Status</a></p>
             <p><a href="https://www.apple.com/shop/help">Shopping Help</a></p>
         </div>
-        <!-- <div class="footer-copyright">
-            <img class="logo-footer" src="img/apple-logo.png" alt="footer logo">
-            <p class="txt-copy"><a target="_blank" href="https://www.apple.com/id/">appleindonesia</a> &copy; 2021</p>
-        </div> -->
     </div>
     </footer>
 
     
-    <script src="script.js"></script>
+    <script src="script.min.js" defer></script>
 </body>
 </html>
